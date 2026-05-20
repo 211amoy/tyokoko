@@ -10,7 +10,111 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-<style>
+<style>/* CONTACT整体 */
+.contact-layout{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:80px;
+  flex-wrap:wrap;
+}
+
+/* 左边 */
+.contact-table-area{
+  flex:1;
+  min-width:320px;
+}
+
+/* 表格 */
+.contact-table,
+.inline-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 18px;
+}
+
+/* 单元格 */
+.contact-table td,
+.inline-table td{
+  background:#111;
+  color:#fff;
+  padding:26px 30px;
+  border-radius:22px;
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* 公司名 */
+.small-box{
+  width:260px;
+}
+
+/* 地址 */
+.address-box{
+  width:650px;
+  max-width:100%;
+}
+
+/* 邮箱 */
+.mail-box{
+  width:320px;
+}
+
+/* 中间双列 */
+.inline-table{
+  width:auto;
+}
+
+.inline-table td{
+  min-width:220px;
+}
+
+/* 二维码区域 */
+.qr-area{
+  display:flex;
+  align-items:center;
+  gap:46px;
+  padding-top:120px;
+}
+
+/* 二维码 */
+.qr-box img{
+  width:170px;
+  height:170px;
+  object-fit:cover;
+  background:#fff;
+  border-radius:4px;
+}
+
+/* 手机 */
+@media(max-width:768px){
+
+  .contact-layout{
+    flex-direction:column;
+  }
+
+  .inline-table{
+    width:100%;
+  }
+
+  .inline-table tr{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .qr-area{
+    width:100%;
+    justify-content:center;
+    padding-top:20px;
+  }
+
+  .qr-box img{
+    width:120px;
+    height:120px;
+  }
+
+}
 .company-info-row{
   display:flex;
   flex-wrap:wrap;
@@ -1142,61 +1246,87 @@ LIMITED EDITION
 </div>
 
 </section>
-
 <!-- CONTACT -->
-
 <section id="contact" class="contact">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-title">
+    <div class="section-title">
+      <h2>CONTACT</h2>
+      <p>お気軽にお問い合わせください</p>
+    </div>
 
-<h2>CONTACT</h2>
+    <div class="contact-layout">
 
-<p>
-お気軽にお問い合わせください
-</p>
+      <!-- 左侧 -->
+      <div class="contact-table-area">
 
-</div>
+        <table class="contact-table">
 
-<div class="contact-grid">
+          <tr>
+            <td class="small-box">
+              <strong>会社名：</strong>
+              株式会社チョココ
+            </td>
+          </tr>
 
-<div class="contact-info">
-<div class="company-info-row">
+          <tr>
+            <td class="address-box">
+              <strong>住所：</strong>
+              〒550-0012 大阪市西区立売堀1-6-13
+              南本町天祥ビル2号館311室
+            </td>
+          </tr>
 
-<div>
-<strong>会社名：</strong>
-株式会社チョココ
-</div>
+        </table>
 
-<div>
-<strong>住所：</strong>
-〒550-0012 大阪市西区立売堀1-6-13 南本町天祥ビル2号館311室
-</div>
+        <!-- 中间双列表格 -->
+        <table class="inline-table">
 
-<div>
-<strong>代表取締役：</strong>
-呉宇誠
-</div>
+          <tr>
 
-<div>
-<strong>TEL：</strong>
-06-7494-3188
-</div>
+            <td>
+              <strong>代表取締役：</strong>
+              呉宇誠
+            </td>
 
-<div>
-<strong>E-mail：</strong>
-gaowusai@gmail.com
-</div>
+            <td>
+              <strong>TEL：</strong>
+              06-7494-3188
+            </td>
 
-</div>
+          </tr>
 
-</div>
+        </table>
 
+        <table class="contact-table">
 
-</div>
+          <tr>
+            <td class="mail-box">
+              <strong>E-mail：</strong>
+              gaowusai@gmail.com
+            </td>
+          </tr>
 
-</div>
+        </table>
+
+      </div>
+
+      <!-- 右侧二维码 -->
+      <div class="qr-area">
+
+        <div class="qr-box">
+          <img src="qr1.png" alt="wechat">
+        </div>
+
+<div class="qr-box">
+          <img src="qr2.png" alt="wechat">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
