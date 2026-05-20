@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>株式会社チョココ | TOY・HOBBY・MODEL</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+.company-info-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  color:#d0d0d0;
+  line-height:1.8;
+}
+
+.company-info-row div{
+  background:#1b1b1b;
+  padding:14px 20px;
+  border-radius:14px;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:#0b0b0b;
+  color:white;
+  overflow-x:hidden;
+  line-height:1.8;
+}
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#ff4fa3;
+  border-radius:10px;
+}
+
+.container{
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+
+section{
+  padding:110px 0;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.section-title h2{
+  font-size:52px;
+  margin-bottom:15px;
+  font-weight:900;
+}
+
+.section-title p{
+  color:#bcbcbc;
+  max-width:700px;
+  margin:auto;
+  font-size:17px;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:900;
+  color:#ff4fa3;
+  letter-spacing:3px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  font-size:15px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#ff4fa3;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+  url("store1.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{
+  max-width:760px;
+}
+
+.hero h1{
+  font-size:82px;
+  line-height:1.1;
+  margin-bottom:25px;
+  font-weight:900;
+}
+
+.hero p{
+  font-size:20px;
+  color:#d5d5d5;
+  margin-bottom:35px;
+}
+
+.hero-btn{
+  display:inline-block;
+  padding:16px 40px;
+  background:#ff4fa3;
+  border-radius:60px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  background:#ff2d8b;
+  transform:translateY(-4px);
+}
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-image img{
+  border-radius:24px;
+}
+
+.about-text h3{
+  font-size:42px;
+  margin-bottom:25px;
+  color:#ff4fa3;
+}
+
+.about-text p{
+  color:#d0d0d0;
+  margin-bottom:20px;
+}
+
+/* PRODUCTS */
+
+.products{
+  background:#111;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.product-card{
+  background:#151515;
+  border-radius:24px;
+  overflow:hidden;
+  transition:0.35s;
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
+}
+
+.product-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(255,79,163,0.25);
+}
+
+.product-card img{
+  height:320px;
+  object-fit:cover;
+}
+
+.product-content{
+  padding:28px;
+}
+
+.product-content h3{
+  margin-bottom:15px;
+  font-size:26px;
+}
+
+.product-content p{
+  color:#bcbcbc;
+}
+
+/* NEW ARRIVAL */
+
+.new-arrival{
+  background:#0d0d0d;
+}
+
+.arrival-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.arrival-card{
+  background:#151515;
+  border-radius:24px;
+  overflow:hidden;
+  transition:0.35s;
+  position:relative;
+}
+
+.arrival-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(255,79,163,0.25);
+}
+
+.arrival-card img{
+  height:360px;
+  object-fit:cover;
+}
+
+.tag{
+  position:absolute;
+  top:18px;
+  left:18px;
+  background:#ff4fa3;
+  color:white;
+  font-size:12px;
+  padding:6px 14px;
+  border-radius:30px;
+  font-weight:bold;
+  z-index:2;
+}
+
+.arrival-content{
+  padding:28px;
+}
+
+.arrival-content h3{
+  font-size:24px;
+  margin-bottom:12px;
+}
+
+.arrival-content p{
+  color:#bbb;
+  margin-bottom:10px;
+}
+
+.arrival-content span{
+  color:#ff4fa3;
+  font-size:14px;
+  font-weight:bold;
+}
+
+/* GALLERY */
+
+.gallery{
+  background:#111;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  height:320px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.03);
+}
+
+/* STATS */
+
+.stats-section{
+  background:#0d0d0d;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.stat-box{
+  background:#151515;
+  padding:45px;
+  text-align:center;
+  border-radius:22px;
+}
+
+.stat-box h2{
+  font-size:55px;
+  color:#ff4fa3;
+  margin-bottom:10px;
+}
+
+.stat-box p{
+  color:#bbb;
+  font-size:18px;
+}
+
+/* FEATURES */
+
+.features{
+  background:#111;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.feature-box{
+  background:#151515;
+  padding:45px 35px;
+  border-radius:24px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.35s;
+}
+
+.feature-box:hover{
+  transform:translateY(-8px);
+  border-color:#ff4fa3;
+  box-shadow:0 15px 40px rgba(255,79,163,0.18);
+}
+
+.icon{
+  width:48px;
+  height:48px;
+  margin:auto;
+  margin-bottom:20px;
+  border-radius:14px;
+  background:rgba(255,79,163,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  border:1px solid rgba(255,79,163,0.25);
+}
+
+.feature-box h3{
+  font-size:24px;
+  margin-bottom:18px;
+  color:#ff4fa3;
+}
+
+.feature-box p{
+  color:#bbb;
+  font-size:15px;
+}
+
+/* BRANDS */
+
+.brand-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.brand-box{
+  background:#151515;
+  padding:35px;
+  text-align:center;
+  border-radius:18px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.brand-box:hover{
+  background:#ff4fa3;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#111;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.contact-info{
+  background:#151515;
+  padding:40px;
+  border-radius:24px;
+}
+
+.contact-info h3{
+  font-size:34px;
+  color:#ff4fa3;
+  margin-bottom:25px;
+}
+
+.contact-info p{
+  margin-bottom:18px;
+  color:#d0d0d0;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+textarea{
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:#1e1e1e;
+  color:white;
+  font-size:15px;
+}
+
+textarea{
+  min-height:180px;
+  resize:none;
+}
+
+button{
+  padding:16px;
+  border:none;
+  border-radius:50px;
+  background:#ff4fa3;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff2d8b;
+}
+
+footer{
+  background:#050505;
+  text-align:center;
+  padding:45px 0;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+footer p{
+  color:#999;
+}
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+チョココ
+</div>
+
+<div class="nav-links">
+<a href="#about">会社概要</a>
+<a href="#products">商品分類</a>
+<a href="#gallery">店舗展示</a>
+<a href="#features">サービス</a>
+<a href="#contact">お連絡</a>
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h1>
+TOY・HOBBY・MODEL
+</h1>
+
+<p>
+株式会社チョココは大阪を拠点とする玩具・ホビー・模型専門企業です。<br>
+フィギュア・プラモデル・コレクション玩具・限定商品を世界中へ販売しています。
+</p>
+
+<a href="#contact" class="hero-btn">
+お連絡
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>ABOUT US</h2>
+<p>
+日本ホビー文化を世界へ
+</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-image">
+<img src="store2.jpg">
+</div>
+
+<div class="about-text">
+
+<h3>株式会社チョココ</h3>
+
+<p>
+大阪市西区を拠点とするホビー・模型専門会社です。
+</p>
+
+<p>
+フィギュア・プラモデル・玩具・限定コレクション商品などを多数取り扱っています。
+</p>
+
+<p>
+海外発送・予約販売・卸売対応も可能です。
+</p>
+
+<p>
+世界中のお客様へ高品質な日本ホビー商品を届けています。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+<!-- PRODUCTS -->
+
+<section id="products" class="products">
+
+<div class="container">
+
+<div class="section-title">
+<h2>PRODUCTS</h2>
+<p>
+人気ホビー・模型商品を多数ラインナップ
+</p>
+</div>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="product1.png">
+
+<div class="product-content">
+
+<h3>MAXIMATIC 初音ミク</h3>
+
+<p>
+人気コレクションフィギュアシリーズ。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product2.png">
+
+<div class="product-content">
+
+<h3>GLITTER & GLAMOURS</h3>
+
+<p>
+高品質ディスプレイフィギュア。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product3.png">
+
+<div class="product-content">
+
+<h3>FLAG DIAMOND SHIP</h3>
+
+<p>
+人気キャラクター大型モデル。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product4.png">
+
+<div class="product-content">
+
+<h3>SOLID EDGE WORKS</h3>
+
+<p>
+迫力ある筋肉造形シリーズ。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product5.png">
+
+<div class="product-content">
+
+<h3>VIBRATION STARS</h3>
+
+<p>
+アクションポーズ特化モデル。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product6.png">
+
+<div class="product-content">
+
+<h3>GRANDISTA</h3>
+
+<p>
+大型プレミアムフィギュア。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product7.png">
+
+<div class="product-content">
+
+<h3>NARUTOシリーズ</h3>
+
+<p>
+人気忍者キャラクター商品。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product8.png">
+
+<div class="product-content">
+
+<h3>疾風伝モデル</h3>
+
+<p>
+高精細ホビーコレクション。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product9.png">
+
+<div class="product-content">
+
+<h3>GRANDISTA ベジータ</h3>
+
+<p>
+大型ディスプレイモデル。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product10.png">
+
+<div class="product-content">
+
+<h3>GRANDISTA ルフィ</h3>
+
+<p>
+限定コレクションモデル。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product11.png">
+
+<div class="product-content">
+
+<h3>SOFVIMATES</h3>
+
+<p>
+かわいい人気キャラクターシリーズ。
+</p>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="product12.png">
+
+<div class="product-content">
+
+<h3>BATTLE RECORD</h3>
+
+<p>
+ハイクオリティ戦闘ポーズモデル。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEW ARRIVAL -->
+
+<section class="new-arrival">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>NEW ARRIVAL</h2>
+
+<p>
+今月最新入荷ホビー・限定モデル
+</p>
+
+</div>
+
+<div class="arrival-grid">
+
+<div class="arrival-card">
+
+<div class="tag">
+NEW
+</div>
+
+<img src="new1.jpg">
+
+<div class="arrival-content">
+
+<h3>限定フィギュアシリーズ</h3>
+
+<p>
+大型コレクションモデル
+</p>
+
+<span>
+2026 SPRING
+</span>
+
+</div>
+
+</div>
+
+<div class="arrival-card">
+
+<div class="tag">
+HOT
+</div>
+
+<img src="new2.jpg">
+
+<div class="arrival-content">
+
+<h3>プレミアム模型</h3>
+
+<p>
+最新メタリック内部構造モデル
+</p>
+
+<span>
+PREMIUM MODEL
+</span>
+
+</div>
+
+</div>
+
+<div class="arrival-card">
+
+<div class="tag">
+LIMITED
+</div>
+
+<img src="new3.jpg">
+
+<div class="arrival-content">
+
+<h3>限定コレクション</h3>
+
+<p>
+数量限定スペシャルモデル
+</p>
+
+<span>
+LIMITED EDITION
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery" class="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>STORE GALLERY</h2>
+
+<p>
+店舗内観・商品展示エリア
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="store1.jpg">
+<img src="store2.jpg">
+<img src="store3.jpg">
+<img src="store4.jpg">
+<img src="store5.jpg">
+<img src="store2.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>COMPANY DATA</h2>
+<p>
+数字で見る株式会社チョココ
+</p>
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h2>12,800+</h2>
+<p>累計販売商品</p>
+</div>
+
+<div class="stat-box">
+<h2>86</h2>
+<p>提携ブランド</p>
+</div>
+
+<div class="stat-box">
+<h2>32</h2>
+<p>海外発送地域</p>
+</div>
+
+<div class="stat-box">
+<h2>98%</h2>
+<p>顧客満足度</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features" class="features">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>OUR SERVICE</h2>
+
+<p>
+高品質なホビー商品を世界へ
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-box">
+
+<div class="icon">
+🎌
+</div>
+
+<h3>正規品保証</h3>
+
+<p>
+日本国内正規流通商品を中心に取り扱い。
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="icon">
+✈️
+</div>
+
+<h3>海外発送</h3>
+
+<p>
+30カ国以上への発送対応。
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="icon">
+🔥
+</div>
+
+<h3>人気商品</h3>
+
+<p>
+多彩な模型・玩具商品を販売。
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="icon">
+🛒
+</div>
+
+<h3>予約販売</h3>
+
+<p>
+限定商品・新作ホビー予約受付中。
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="icon">
+🏪
+</div>
+
+<h3>店舗販売</h3>
+
+<p>
+大阪市内で展示販売も実施。
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<div class="icon">
+🤝
+</div>
+
+<h3>B2B対応</h3>
+
+<p>
+卸売・代理購入・OEM相談可能。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BRANDS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>BRANDS</h2>
+
+<p>
+取扱ブランド
+</p>
+
+</div>
+
+<div class="brand-grid">
+
+<div class="brand-box">BANDAI</div>
+<div class="brand-box">BANPRESTO</div>
+<div class="brand-box">SEGA</div>
+<div class="brand-box">Good Smile</div>
+<div class="brand-box">FuRyu</div>
+<div class="brand-box">ALTER</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>CONTACT</h2>
+
+<p>
+お気軽にお問い合わせください
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+<div class="company-info-row">
+
+<div>
+<strong>会社名：</strong>
+株式会社チョココ
+</div>
+
+<div>
+<strong>住所：</strong>
+〒550-0012 大阪市西区立売堀1-6-13 南本町天祥ビル2号館311室
+</div>
+
+<div>
+<strong>代表取締役：</strong>
+呉宇誠
+</div>
+
+<div>
+<strong>TEL：</strong>
+06-7494-3188
+</div>
+
+<div>
+<strong>E-mail：</strong>
+gaowusai@gmail.com
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 株式会社チョココ All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
